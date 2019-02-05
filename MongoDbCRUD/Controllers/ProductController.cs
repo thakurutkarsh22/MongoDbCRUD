@@ -41,19 +41,23 @@ namespace MongoDbCRUD.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
-            return View("Create");
+            //return View("Create");
+            return View();
         }
 
         // POST: Product/Create
         [HttpPost]
         public ActionResult Create(ProductModel product)
         {
+            
             try
             {
-                //  Db is updated from here boiyee
-                productCollection.InsertOne(product);
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {   //  Db is updated from here boiyee
+                    productCollection.InsertOne(product);
+                }
+                // return RedirectToAction("Index");
+                return View();  
             }
             catch
             {
