@@ -9,6 +9,8 @@ using System.Configuration;
 using MongoDbCRUD.App_Start;
 using MongoDB.Driver;
 using MongoDbCRUD.Models;
+using MongoDbCRUD.Controllers;
+using System.Security; 
 
 namespace MongoDbCRUD.Controllers
 {
@@ -46,18 +48,43 @@ namespace MongoDbCRUD.Controllers
         }
 
         // POST: Product/Create
+        /*    [HttpPost]
+            public ActionResult Create(ProductModel product)
+            {
+
+                try
+                {
+                    if (ModelState.IsValid)
+                    {   //  Db is updated from here boiyee
+                        productCollection.InsertOne(product);
+                    }
+                    // return RedirectToAction("Index");
+                    return View();  
+                }
+                catch
+                {
+                    return View();
+                }
+            } */
+
         [HttpPost]
         public ActionResult Create(ProductModel product)
         {
-            
+
             try
             {
                 if (ModelState.IsValid)
                 {   //  Db is updated from here boiyee
+                 
+                    string pass = product.Password;
+                    string password = Helper.EncodePasswordMd5(pass);
+                    product.Password = (string)password;
+                    
+
                     productCollection.InsertOne(product);
                 }
                 // return RedirectToAction("Index");
-                return View();  
+                return View();
             }
             catch
             {

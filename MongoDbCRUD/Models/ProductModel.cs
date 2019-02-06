@@ -6,6 +6,7 @@ using MongoDB.Bson;
 using System.ComponentModel; 
 using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Web.Security;
 
 namespace MongoDbCRUD.Models
 {
@@ -28,6 +29,23 @@ namespace MongoDbCRUD.Models
         [RegularExpression("^[0-9]*$", ErrorMessage = "must be numeric")]
         [BsonElement("Quantity")]
         public string Quantity { get; set; }
+
+
+        
+
+       // [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required]
+        [MembershipPassword(
+         MinRequiredNonAlphanumericCharacters = 1,
+         MinNonAlphanumericCharactersError = "Your password needs to contain at least one symbol (!, @, #, etc).",
+         ErrorMessage = "Your password must be 6 characters long and contain at least one symbol (!, @, #, etc).",
+         MinRequiredPasswordLength = 6
+           )]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        [BsonElement("Password")]
+        public string Password { get; set; }
+
 
     }
 }
