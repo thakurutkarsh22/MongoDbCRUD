@@ -50,6 +50,8 @@ namespace MongoDbCRUD.Controllers
         public ActionResult Create(ProductModel product)
         {
             
+            
+
             try
             {
                 if (ModelState.IsValid)
