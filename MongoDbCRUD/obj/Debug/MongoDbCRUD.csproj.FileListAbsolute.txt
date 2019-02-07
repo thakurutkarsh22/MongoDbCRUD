@@ -83,7 +83,6 @@ C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\bin\Antlr3.Runtime.pdb
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.csprojAssemblyReference.cache
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.csproj.CoreCompileInputs.cache
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.csproj.CopyComplete
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.dll

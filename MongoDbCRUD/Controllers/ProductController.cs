@@ -40,7 +40,13 @@ namespace MongoDbCRUD.Controllers
             try
             {
                 if (ModelState.IsValid)
-                {   //  Db is updated from here boiyee
+                {   //  Db 
+
+                    string pass = students.Password;
+                    string password = Helper.EncodePasswordMd5(pass)+ "THis is the password";
+                    students.Password = (string)password;
+
+
                     registerCollection.InsertOne(students);
                 }
                 // return RedirectToAction("Index");

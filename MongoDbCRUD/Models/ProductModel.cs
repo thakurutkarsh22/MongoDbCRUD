@@ -13,7 +13,7 @@ namespace MongoDbCRUD.Models
         public ObjectId Id { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3,ErrorMessage ="Name should be of perfect Guidelines")]
         [BsonElement("ProductName")]
         public string ProductName { get; set; }
 

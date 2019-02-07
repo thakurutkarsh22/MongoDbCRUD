@@ -14,14 +14,14 @@ namespace MongoDbCRUD.Models
         public ObjectId Id { get; set; }
 
         [Required(ErrorMessage = "First Name is required")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3 , ErrorMessage ="Follow Guidlines")]
         [BsonElement("FirstName")]
         public string FirstName { get; set; }
 
 
 
         [Required(ErrorMessage = "Second Name is required")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "Follow Guidlines")]
         [BsonElement("SecondName")]
         public string SecondName { get; set; }
 
