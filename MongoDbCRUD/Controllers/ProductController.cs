@@ -19,15 +19,37 @@ namespace MongoDbCRUD.Controllers
         private MongoDBContext dbcontext;
         private IMongoCollection<ProductModel> productCollection;
 
+        private IMongoCollection<RegistrationModel> registerCollection;
+
         public ProductController()
         {
             dbcontext = new MongoDBContext();
             productCollection = dbcontext.database.GetCollection<ProductModel>("product");
+
+            registerCollection = dbcontext.database.GetCollection<RegistrationModel>("student");
         }
 
         public ActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(RegistrationModel students)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {   //  Db is updated from here boiyee
+                    registerCollection.InsertOne(students);
+                }
+                // return RedirectToAction("Index");
+                return View();
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: Product
