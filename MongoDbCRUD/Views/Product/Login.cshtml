@@ -1,0 +1,67 @@
+﻿@model MongoDbCRUD.Models.RegistrationModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet">
+</head>
+<body >
+    <div class="form-signin">
+
+
+        @using (Html.BeginForm())
+        {
+
+            <div class="text-center">
+                <img src="" class="mb-4" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Registration</h1>
+            </div>
+
+            <!--First Name-->
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "sr-only" })
+
+            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @id = "Pname", @class="form-control"
+             , @placeholder="First Name" , @type="text"} })
+
+
+            <!--Second Name-->
+            @Html.LabelFor(model => model.SecondName, htmlAttributes: new { @class = "sr-only" })
+
+            @Html.EditorFor(model => model.SecondName, new { htmlAttributes = new { @id = "", @class="form-control"
+          , @placeholder="Second Name", @type = "text"} })
+
+            <!--Email-->
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "sr-only" })
+
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @id = "inputEmail", @class="form-control"
+         , @placeholder="Email address", @type="email"} })
+
+            <!--Password-->
+
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "sr-only" })
+
+            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @id = "inputPassword", @class="form-control"
+         , @placeholder= "Password", @type= "password"} })
+
+
+            <!--     <div class="checkbox mb-3 text-center">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>-->
+            <button class="btn btn-lg btn-primary btn-block mt-4" type="submit">Sign Up</button>
+            <p class="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
+
+        }
+    </div>
+</body>
+</html>

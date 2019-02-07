@@ -25,6 +25,11 @@ namespace MongoDbCRUD.Controllers
             productCollection = dbcontext.database.GetCollection<ProductModel>("product");
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         // GET: Product
         public ActionResult Index()
         {
