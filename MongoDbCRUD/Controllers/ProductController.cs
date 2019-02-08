@@ -36,7 +36,16 @@ namespace MongoDbCRUD.Controllers
 
         public ActionResult StudentPage()
         {
-            return View();
+            StudentPageModel studentd = new StudentPageModel("2018","5th","asd455","utkarsh","dadachi","24/12","vpt","vs","3233c","12","22");
+            
+
+            return View(studentd);
+        }
+
+        public ActionResult StudentList()
+        {
+            List<ProductModel> students = productCollection.AsQueryable<ProductModel>().ToList();
+            return View(students);
         }
 
         [HttpPost]
