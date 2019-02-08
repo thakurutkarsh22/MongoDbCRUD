@@ -87,3 +87,4 @@ C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.c
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.csproj.CopyComplete
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.dll
 C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.pdb
+C:\Users\Blacksmith\source\repos\MongoDbCRUD\MongoDbCRUD\obj\Debug\MongoDbCRUD.csprojAssemblyReference.cache

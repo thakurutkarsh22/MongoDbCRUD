@@ -1,0 +1,108 @@
+﻿@model MongoDbCRUD.Models.StudentPageModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentPage</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StudentPage.css" rel="stylesheet">
+</head>
+<body>
+    <div class="Adetail">
+
+        <!--School Detail-->
+        <div class="text-center">
+            <img src="~/Pictures/hpLogo.jpg" class="mb-4 image" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Kiit World School</h1>
+        </div>
+
+
+        <!--Progress Repo-->
+
+        <div class="text-center">
+            <h2>Progress Report</h2>
+            <div class="input-group">
+                @Html.LabelFor(model => model.session, htmlAttributes: new { @class = "input-group-addon left" })
+                <!--     @Html.EditorFor(model => model.session, new { htmlAttributes = new { @id = "Fname", @class="form-control"
+             , @placeholder="Session" , @type="text"} })
+            -->
+                @Html.DisplayFor(m => m.standard, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.standard, htmlAttributes: new { @class = "input-group-addon left" })
+
+                @Html.DisplayFor(m => m.standard, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+        </div>
+
+        <!--Student Profile-->
+
+        <div class="text-center">
+            <h2>Student Profile</h2>
+            <div class="input-group">
+                @Html.LabelFor(model => model.AdmissionNumber, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.AdmissionNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.NameOfStudent, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.NameOfStudent, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.House, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.House, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.DOB, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.DOB, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.FatherName, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.FatherName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.MotherName, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.MotherName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "input-group-addon left" })
+                @Html.DisplayFor(m => m.Address, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+        </div>
+
+        <!--Attandance-->
+
+        <div class="text-center">
+            <h2>Attendence</h2>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.TotalAttendence, htmlAttributes: new { @class = "input-group-addon left" })
+
+                @Html.DisplayFor(m => m.TotalAttendence, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+            <div class="input-group">
+                @Html.LabelFor(model => model.TotalWorkingDays, htmlAttributes: new { @class = "input-group-addon left" })
+
+                @Html.DisplayFor(m => m.TotalWorkingDays, new { htmlAttributes = new { @class = "form-control", @placeholder = "Session" } })
+            </div>
+
+        </div>
+        
+
+    </div>
+</body>
+</html>

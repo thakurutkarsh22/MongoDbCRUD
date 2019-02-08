@@ -1,0 +1,25 @@
+﻿body {
+   
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    background-color : darkslategray;
+
+   
+}
+
+.Adetail {
+    background: #f5f5f5;
+    box-shadow: 7px 10px;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.left {
+    float:left;
+    width:30%;
+}

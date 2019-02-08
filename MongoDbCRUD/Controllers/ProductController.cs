@@ -34,6 +34,11 @@ namespace MongoDbCRUD.Controllers
             return View();
         }
 
+        public ActionResult StudentPage()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(RegistrationModel students)
         {

@@ -153,6 +153,7 @@
     </Compile>
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\StudentPageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +162,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\signin.css" />
+    <Content Include="Content\StudentPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -202,6 +204,7 @@
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
     <Content Include="Views\Product\Login.cshtml" />
+    <Content Include="Views\Product\StudentPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
